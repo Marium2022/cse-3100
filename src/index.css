@@ -1,32 +1,91 @@
+/* Global Layout Styles */
 .layout {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
+/* Header Styles */
 header {
   padding: 1em;
-}
-
-main {
-  flex: 1;
-  padding: 1em;
-}
-footer {
-  padding: 1em;
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #ddd;
   text-align: center;
 }
 
+/* Main Section Styles */
+main {
+  flex: 1;
+  padding: 1em;
+  background-color: #ffffff;
+}
+
+/* Footer Styles */
+footer {
+  padding: 1em;
+  text-align: center;
+  background-color: #f8f9fa;
+  border-top: 1px solid #ddd;
+}
+
+/* Cat Card Styles */
 .cat-card {
   border: 1px solid #ddd;
+  border-radius: 8px;
   text-align: center;
   height: 250px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.cat-card img {
+  border-bottom: 1px solid #ddd;
+  object-fit: cover;
+  height: 150px;
+  width: 100%;
 }
 
 .cat-info {
   background: #f8f9fa;
+  padding: 0.5em;
   border-radius: 4px;
+}
+
+/* Buttons and Links */
+button, a {
+  text-decoration: none;
+  border: none;
+  background: #007bff;
+  color: white;
+  padding: 0.5em 1em;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover, a:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive Grid */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.col-md-4 {
+  flex: 1 1 calc(33.333% - 1em);
+  max-width: calc(33.333% - 1em);
+}
+
+@media (max-width: 768px) {
+  .col-md-4 {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }
